@@ -1,0 +1,204 @@
+.chiropractor {
+  position: relative;
+
+  max-width: 100vw;
+  min-height: 100vh;
+
+  &__info {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    min-height: 100vh;
+
+    &-text {
+      max-width: 520px;
+    }
+
+    &-sub-title {
+      position: relative;
+      z-index: 1;
+
+      @include sub-title;
+      padding: 0 0 25px;
+    }
+
+    &-title {
+      position: relative;
+      z-index: 1;
+
+      @include title;
+      padding: 0 0 30px;
+    }
+
+    &-description {
+      position: relative;
+    }
+  }
+
+  &__year {
+    color: $dark3 !important;
+  }
+
+  &__man {
+    position: absolute;
+
+    top: 15%;
+    left: 0;
+
+    width: 360px;
+    height: 450px;
+    object-fit: cover;
+
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.14), 0 3px 14px rgba(0, 0, 0, 0.12), 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &__woman {
+    position: absolute;
+
+    right: 0;
+    bottom: 15%;
+
+    width: 300px;
+    height: 310px;
+    object-fit: cover;
+
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.14), 0 3px 14px rgba(0, 0, 0, 0.12), 0 5px 5px rgba(0, 0, 0, 0.2);
+  }
+
+  &__bg {
+    @include image;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .chiropractor {
+
+    &__info {
+
+      &-text {
+        max-width: 490px;
+      }
+    }
+
+    &__man {
+      position: absolute;
+
+      width: 330px;
+      height: 400px;
+    }
+
+    &__woman {
+      width: 250px;
+      height: 255px;
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .chiropractor {
+    background: $bgDarkColor1;
+
+    &__info {
+      align-items: flex-start;
+
+      &-text {
+        max-width: 100%;
+        padding: 0 25px 130px;
+      }
+
+      &-sub-title {
+        padding: 0 0 20px;
+      }
+
+      &-title {
+        padding: 0 0 25px;
+      }
+    }
+
+    &__year {
+      padding: 30px 25px 0;
+      color: $bgDarkColor1 !important;
+    }
+
+    &__man {
+      position: relative;
+
+      width: 100%;
+      height: 65vh;
+      object-position: 0 15%;
+    }
+
+    &__woman {
+      position: relative;
+
+      width: 100%;
+      max-height: 60vh;
+      height: 100%;
+    }
+
+    &__bg {
+      display: none;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .chiropractor {
+
+    &__info {
+
+      &-text {
+        padding: 0 20px 130px;
+      }
+
+      &-sub-title {
+        padding: 0 0 15px;
+      }
+    }
+
+    &__man {
+      height: 50vh;
+    }
+
+    &__year {
+      padding: 30px 20px 0;
+    }
+
+    &__woman {
+      max-height: 40vh;
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .chiropractor {
+
+    &__info {
+
+      &-text {
+        padding: 0 15px 130px;
+      }
+    }
+
+    &__year {
+      padding: 25px 15px 0;
+    }
+
+    &__man {
+      height: 40vh;
+    }
+
+    &__woman {
+      max-height: 30vh;
+    }
+  }
+}

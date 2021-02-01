@@ -1,0 +1,21 @@
+.checkout {
+
+  &-body {
+
+    &__form {
+
+      &-input {
+        @include referral-input;
+      }
+
+      &-checkbox {
+        @include referral-checkbox;
+        justify-content: flex-start !important;
+      }
+
+      &-error {
+        color: $red;
+      }
+    }
+  }
+}

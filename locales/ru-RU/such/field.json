@@ -1,0 +1,11 @@
+{
+  "field_required_field": "Поле обязательно для заполнения",
+  "field_min_length": "Минимальное количество символов",
+  "field_email": "Это не похоже на мыло",
+  "field_email_already": "Такой email уже зарегистрирован",
+  "field_password": "Пароль не совпадает",
+  "field_email_not": "Email не найден",
+  "field_password_wrong": "Пароль не верный",
+  "field_forgot": "Забыли пароль?",
+  "field_already_exists": "Такой email уже добавлен"
+}

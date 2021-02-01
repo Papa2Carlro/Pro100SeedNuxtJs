@@ -1,0 +1,178 @@
+.faq {
+  position: relative;
+  color: $white;
+
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__main {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 940px;
+
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  &__list {
+    $list: &;
+    @include reset-list;
+
+    padding: 40px 0;
+
+    &-open {
+      width: 40px;
+      height: 40px;
+      position: relative;
+
+      border-radius: 100px;
+
+      cursor: pointer;
+      border: 2px solid rgba($white, .8);
+      box-sizing: border-box;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: border .3s 0s;
+
+      &::after {
+        content: '';
+        background: rgba($white, .8);
+        display: block;
+
+        @include absolut-center;
+
+        width: 16px;
+        height: 2px;
+
+        transition: background .3s 0s;
+      }
+
+      &::before {
+        content: '';
+        background: rgba($white, .8);
+        display: block;
+
+        @include absolut-center;
+
+        width: 2px;
+        height: 16px;
+
+        transform-origin: center;
+        transition: transform .35s 0s, background .3s 0s;
+      }
+
+      &:hover {
+        border: 2px solid rgba($green1, .8);
+
+        &:before,
+        &:after {
+          background: rgba($green1, .8);
+        }
+      }
+    }
+
+    &-text {
+      flex: 1 0 100%;
+
+      margin: 12px 0;
+
+      font-size: 18px;
+      line-height: 30px;
+      opacity: 0.8;
+
+      height: 0;
+      overflow: hidden;
+
+      transition: height .3s 0s;
+
+      p {
+        padding: 0 0 10px;
+      }
+    }
+
+    &-num {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 1.5px;
+
+      user-select: none;
+    }
+
+    &-header {
+      display: flex;
+
+      width: 80%;
+    }
+
+    &-title {
+      padding: 0 0 0 20px;
+
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 30px;
+    }
+
+    &-item {
+      border-top: 1px solid rgba($white, .8);
+      padding: 24px 0 0;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      flex-wrap: wrap;
+
+      &.isOpen {
+        #{$list} {
+
+          &-text {
+            height: var(--height);
+          }
+
+          &-open {
+            &::before {
+              transform: translate(-50%, -50%) rotate(270deg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &__bg {
+    position: absolute;
+    user-select: none;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .faq {
+
+    &__list {
+      padding: 0;
+
+      &-text {
+        font-size: 16px;
+      }
+    }
+  }
+}

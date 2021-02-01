@@ -1,0 +1,170 @@
+.wishlist {
+  position: relative;
+  overflow: hidden;
+
+  color: $white;
+  min-height: 100vh;
+
+  &__body {
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 1030px;
+
+    margin: 0 auto;
+    padding: 20px 15px;
+
+    &-list {
+      @include reset-list;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+
+      grid-column-gap: 50px;
+      grid-row-gap: 25px;
+    }
+  }
+
+  &__empty {
+    max-width: 450px;
+
+    padding: 100px 15px 15px;
+    margin: 0 auto;
+
+    &-icon {
+      padding: 0 0 30px;
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 24px;
+      opacity: 0.8;
+
+      padding: 0 0 50px;
+    }
+  }
+
+  &__bg {
+    @include bg;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .wishlist {
+
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .wishlist {
+
+    &__body {
+
+      &-list {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 20px 60px;
+
+        grid-column-gap: 70px;
+        grid-row-gap: 25px;
+      }
+    }
+
+    &__empty {
+      max-width: 450px;
+      padding: 80px 15px 15px;
+
+      &-icon {
+        padding: 0 0 25px;
+      }
+
+      &-text {
+        padding: 0 0 45px;
+      }
+    }
+
+    .cart__remove {
+      display: block;
+    }
+
+    .cart__actions {
+      display: none !important;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .wishlist {
+
+    &__body {
+
+      &-list {
+        grid-template-columns: repeat(2, 1fr);
+
+        padding: 20px 0;
+
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+      }
+    }
+
+    &__empty {
+      max-width: 450px;
+      padding: 60px 15px 15px;
+
+      &-icon {
+        padding: 0 0 20px;
+      }
+
+      &-text {
+        padding: 0 0 35px;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .wishlist {
+
+    &__body {
+
+      &-list {
+        grid-template-columns: repeat(1, 1fr);
+
+        padding: 20px 0;
+
+        grid-column-gap: 25px;
+        grid-row-gap: 25px;
+      }
+    }
+
+    &__empty {
+      max-width: 100%;
+      padding: 50px 15px 15px;
+
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      &-icon {
+        padding: 0 0 20px;
+      }
+
+      &-text {
+        padding: 0 0 35px;
+      }
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .wishlist {
+
+  }
+}

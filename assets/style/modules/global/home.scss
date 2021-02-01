@@ -1,0 +1,108 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  background: $bgDarkColor1;
+
+  position: relative;
+
+  z-index: 1;
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  &__header {
+    position: relative;
+    padding: 80px 0 50px;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    &-title {
+      @include title-home;
+    }
+
+    &-description {
+      font-size: 16px;
+      line-height: 26px;
+      opacity: 0.8;
+
+      max-width: 60%;
+      padding: 0 35px 0;
+
+      a {
+        color: $green1;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &__container {
+    max-width: 1040px;
+    width: 100%;
+
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+  &__main {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &.isIndex {
+    z-index: 15;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .home {
+
+    &__header {
+      padding: 75px 0 40px;
+
+      &-description {
+        max-width: 70%;
+        padding: 0 30px 0;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .home {
+
+    &__header {
+      padding: 70px 0 35px;
+
+      &-title {
+        padding-bottom: 15px;
+      }
+
+      &-description {
+        max-width: 100%;
+        padding: 0 20px 0;
+      }
+    }
+  }
+
+  .lock-modal {
+    .home {
+      z-index: 10;
+    }
+  }
+}
+
+// 820
+@media screen and (max-height: 820px) {
+  .lock-modal {
+    .home {
+      z-index: 10;
+    }
+  }
+}

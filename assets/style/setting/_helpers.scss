@@ -1,0 +1,336 @@
+@mixin image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  user-select: none;
+}
+
+@mixin text-border($color, $border-color) {
+  color: $color;
+  text-shadow: 0 1px 0 $border-color, 0px -1px 0 $border-color, 1px 0px 0 $border-color, -1px 0px 0 $border-color, 1px 1px 0 $border-color, 1px -1px 0 $border-color, -1px 1px 0 $border-color, -1px -1px 0 $border-color;
+}
+
+@mixin center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+@mixin sell($width, $fz) {
+  content: 'SELL';
+  position: absolute;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: $width;
+  height: $width;
+
+  background: $ping1;
+
+  font-weight: bold;
+  font-size: $fz;
+  color: $white;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin reset-btn {
+  border: none;
+  outline: none !important;
+  background: transparent;
+}
+
+// Referral UI
+@mixin referral-body($height) {
+  position: relative;
+  z-index: 1;
+
+  width: 100%;
+  max-width: $height;
+
+  padding: 15% 0 30px;
+  margin: 0 15px;
+
+  // 1200
+  @include media-breakpoint-down(lg) {
+    padding: 18% 0 30px;
+  }
+
+  // 992
+  @include media-breakpoint-down(md) {
+    padding: 20% 0 30px;
+  }
+
+  // 576
+  @media screen and (max-width: 576px) {
+    max-width: 100%;
+
+    padding: 24% 0 30px;
+  }
+}
+
+@mixin referral-title {
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 36px;
+  line-height: 43px;
+
+  text-align: center;
+  letter-spacing: 1.5px;
+}
+
+@mixin referral-input {
+  @include reset-btn;
+  width: 100%;
+  height: 28px;
+  padding: 0 0 10px;
+
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: bold;
+  text-align: center;
+
+  color: rgba($white, .8);
+
+  border-bottom: 2px solid rgba($white, .6);
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  &::placeholder {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+
+    text-align: center;
+
+    color: rgba($white, .8);
+  }
+
+  &.invalid {
+    color: $red;
+    border-color: $red;
+
+    &::placeholder {
+      color: $red
+    }
+  }
+}
+
+@mixin referral-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: .6;
+
+  input {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0);
+
+    &:checked {
+      & + label::before {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+    }
+
+    & + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+
+      font-size: 16px;
+      line-height: 105%;
+      margin-bottom: 0;
+
+      &::before {
+        content: '';
+        cursor: pointer;
+
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+
+        border: 2px solid $white;
+        margin: 0 8px 0 0;
+
+        background-size: 65% 65%;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+
+  &.invalid {
+    input {
+      & + label {
+        color: $red;
+
+        &::before {
+          border-color: $red;
+        }
+      }
+    }
+  }
+}
+
+@mixin referral-radio {
+  display: flex;
+  align-items: center;
+
+  input {
+    opacity: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    background: rgba(0, 0, 0, 0);
+
+    &:checked {
+      & + label::before {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%23fff' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3e%3c/svg%3e");
+      }
+    }
+
+    & + label {
+      display: inline-flex;
+      align-items: center;
+      user-select: none;
+
+      font-size: 16px;
+      line-height: 19px;
+      margin-bottom: 10px;
+
+      &::before {
+        content: '';
+        cursor: pointer;
+
+        display: inline-block;
+        width: 16px;
+        height: 16px;
+
+        border: 2px solid rgba($white, .4);
+        margin: 0 24px 0 0;
+
+        background-size: 65% 65%;
+        background-repeat: no-repeat;
+        background-position: center center;
+      }
+    }
+  }
+
+  &.invalid {
+    input {
+      & + label {
+        color: $red;
+
+        &::before {
+          border-color: $red;
+        }
+      }
+    }
+  }
+}
+
+@mixin referral-helper($mt, $mt1200, $mt992, $mt768, $mt576) {
+  margin: $mt 0 0;
+  font-size: 16px;
+  line-height: 26px;
+
+  text-align: center;
+
+  color: rgba($white, .8);
+
+  a {
+    color: $green1;
+    text-decoration: underline;
+  }
+
+  // 1200
+  @include media-breakpoint-down(lg) {
+    margin: $mt1200 0 0;
+  }
+
+  // 992
+  @include media-breakpoint-down(md) {
+    margin: $mt992 0 0;
+  }
+
+  // 768
+  @include media-breakpoint-down(sm) {
+    margin: $mt768 0 0;
+  }
+
+  // 576
+  @media screen and (max-width: 576px) {
+    margin: $mt576 0 0;
+  }
+}
+
+// Absolut positions
+@mixin absolut-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+@mixin absolut-center-x {
+  position: absolute;
+  left: 50%;
+
+  transform: translate(-50%, 0);
+}
+
+
+@mixin absolut-center-y {
+  position: absolute;
+  top: 50%;
+
+  transform: translate(0, -50%);
+}
+
+@mixin bg {
+  position: absolute;
+  margin-top: -5px;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    user-select: none;
+    pointer-events: none;
+  }
+}
+
+@mixin opacity-hover($default, $hover, $duration: .3s) {
+  opacity: $default;
+  transition: opacity $duration 0s;
+
+  &:hover {
+    opacity: $hover;
+  }
+}

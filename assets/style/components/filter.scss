@@ -1,0 +1,147 @@
+.filter {
+  $parent: &;
+  @include reset-list;
+
+  width: 100%;
+  user-select: none;
+
+  &__group {
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 28px;
+
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      padding: 0 0 10px;
+      color: rgba($white, .8);
+    }
+
+    &-list {
+      @include reset-list;
+      width: 100%;
+      overflow: auto;
+
+      display: flex;
+      gap: 20px;
+
+      padding: 0 0 10px;
+    }
+
+    & + & {
+      margin: 10px 0 0;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    fill: $green1;
+
+    transition: fill .3s 0s;
+
+    &--add {
+      @include opacity-hover(.7, 1);
+      fill: transparent !important;
+    }
+  }
+
+  &__item {
+    position: relative;
+    min-width: 82px;
+    min-height: 94px;
+
+    cursor: pointer;
+
+    &-info {
+      position: relative;
+      z-index: 1;
+
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      flex-direction: column;
+    }
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 36px;
+      line-height: 100%;
+      text-transform: uppercase;
+    }
+
+    &-text {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 100%;
+    }
+
+    &-image {
+      position: relative;
+      z-index: 1;
+
+      svg {
+        width: 40px;
+        height: 40px;
+
+        fill: $white;
+      }
+    }
+
+    &:hover {
+      #{$parent}__bg {
+        fill: $green2;
+      }
+    }
+
+    &--image {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .filter {
+    padding: 0 0 20px;
+
+    &__group {
+
+      &-list {
+        gap: 15px;
+      }
+    }
+
+    &__item {
+      min-width: 61px;
+      min-height: 70px;
+
+      &-text {
+        display: none;
+      }
+
+      &-image {
+        position: relative;
+        z-index: 1;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+}

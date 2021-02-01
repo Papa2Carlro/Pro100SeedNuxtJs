@@ -1,0 +1,256 @@
+.stores {
+  position: relative;
+  color: $white;
+
+  min-height: 100vh;
+  overflow-y: hidden;
+
+  &__body {
+    $body: &;
+    position: relative;
+    z-index: 1;
+
+    width: 100%;
+    max-width: 970px;
+
+    margin: 0 auto;
+    padding: 40px 15px;
+
+    display: flex;
+    flex-direction: column;
+
+    &-filter {
+      position: relative;
+
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &-counter {
+      position: absolute;
+      left: calc(100% + 70px);
+      top: 0;
+    }
+
+    &-btn {
+      font-family: Roboto, sans-serif;
+
+      font-size: 14px;
+      line-height: 100%;
+      border: 2px solid $white;
+
+      cursor: pointer;
+      user-select: none;
+
+      padding: 12px 22px;
+      margin: 0 0 0 12px;
+
+      opacity: .4;
+      transition: opacity .2s 0s;
+
+      &.isActive {
+        opacity: 1 !important;
+        font-weight: bold;
+        border-color: $green1;
+      }
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    &-group {
+      display: flex;
+      align-items: center;
+
+      &:first-child {
+        #{$body} {
+          &-btn {
+            margin: 0;
+            padding: 10px 20px !important;
+          }
+        }
+      }
+    }
+  }
+
+  &__list {
+    @include reset-list;
+    margin: 35px 0 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    &-item {
+      border-top: 1px solid rgba($white, .2);
+      padding: 24px 0;
+
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &-num {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 1.5px;
+    }
+
+    &-info {
+      padding: 0 0 0 15px;
+    }
+
+    &-title {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+
+      padding: 0 0 4px;
+    }
+
+    &-address {
+      font-size: 14px;
+      line-height: 22px;
+      opacity: 0.8;
+    }
+  }
+
+  &__counter,
+  &__body-counter {
+    width: fit-content;
+
+    display: flex;
+    align-items: center;
+
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: $white;
+
+    .active {
+      font-size: 16px;
+      padding: 0 3px 0 0;
+    }
+
+    span:not(.active) {
+      opacity: .6;
+    }
+  }
+
+  &__counter {
+    position: absolute;
+    top: 10px;
+    right: 0;
+  }
+
+  &__bg {
+    @include bg;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .stores {
+
+    &__body {
+      padding: 20px 15px 40px;
+
+      &-counter {
+        left: calc(100% - 50px);
+
+        top: -30px;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .stores {
+
+    &__body {
+      $body: &;
+      padding: 0 15px 30px;
+
+      .home__header {
+        order: 1;
+        padding: 0 0 25px;
+      }
+
+      &-filter {
+        order: 0;
+        padding: 75px 0 10px;
+        margin: 0 0 15px;
+
+        max-width: calc(100vw - 30px);
+        overflow: auto;
+      }
+
+      &-counter {
+        display: none;
+      }
+
+      &-btn {
+        width: 100px;
+        display: flex;
+        justify-content: center;
+
+        padding: 7px 0 9px;
+      }
+
+      &-group {
+        &:first-child {
+          #{$body} {
+            &-btn {
+              padding: 7px 0 9px !important;
+            }
+          }
+        }
+      }
+    }
+
+    &__list {
+
+      &-item {
+        padding: 20px 0;
+      }
+    }
+
+    &__list {
+      order: 2;
+      margin: 0;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .stores {
+
+    &__list {
+      grid-template-columns: repeat(1, 1fr);
+
+      &-item {
+        padding: 15px 0;
+      }
+
+      &-address {
+        position: relative;
+        left: -30px;
+      }
+    }
+  }
+}
+
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .stores {
+
+    &__counter {
+      display: none;
+    }
+  }
+}

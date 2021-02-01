@@ -1,0 +1,41 @@
+.input {
+  position: relative;
+  z-index: 1;
+
+  &__body {
+    @include reset-btn;
+
+    width: 100%;
+    height: 40px;
+
+    border-bottom: 1px solid rgba(255,255,255,.6);
+
+    font-weight: bold;
+    font-size: 16px;
+
+    color: $white;
+
+    opacity: 0.8;
+  }
+
+  &__label {
+    left: 5px;
+    z-index: -1;
+
+    display: block;
+
+    @include absolut-center-y;
+
+    font-weight: bold;
+    font-size: 17px;
+    opacity: 0.8;
+
+    transition: all .4s 0s;
+
+    &.isFocus {
+      top: 0;
+      left: 0;
+      font-size: 12px;
+    }
+  }
+}

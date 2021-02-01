@@ -1,0 +1,203 @@
+.editor {
+  color: $white;
+
+  h1 {
+    font-family: BebasNeueBold, sans-serif;
+
+    font-size: 54px;
+    line-height: 55px;
+    letter-spacing: 2px;
+
+    padding: 15px 0 10px;
+  }
+
+  h2 {
+    font-family: BebasNeueBold, sans-serif;
+
+    font-size: 44px;
+    line-height: 52px;
+    letter-spacing: 2px;
+
+    padding: 15px 0 10px;
+  }
+
+  h3 {
+    font-family: BebasNeueBold, sans-serif;
+
+    font-size: 36px;
+    line-height: 39px;
+    letter-spacing: 1.5px;
+
+    padding: 15px 0 10px;
+  }
+
+  h4 {
+    font-family: BebasNeueBold, sans-serif;
+
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 2px;
+
+    padding: 15px 0 10px;
+  }
+
+  h5 {
+    font-family: BebasNeueBold, sans-serif;
+
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 1.5px;
+
+    padding: 15px 0 10px;
+  }
+
+  p {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    line-height: 26px;
+
+    color: rgba($white, .8);
+
+    padding: 0 0 10px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  strong {
+    font-weight: bold;
+    color: $white;
+  }
+
+  blockquote {
+    border-left: 5px solid rgba($white, .6);
+    padding-left: 25px;
+    font-style: italic;
+  }
+
+  a {
+    color: $green1;
+    text-decoration: underline;
+  }
+
+  table {
+    width: 100%;
+    color: $white;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .editor {
+
+    h1 {
+      font-size: 46px;
+      line-height: 48px;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 44px;
+    }
+
+    h3 {
+      font-size: 34px;
+      line-height: 37px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    h5 {
+      font-size: 18px;
+      line-height: 21px;
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .editor {
+    h1 {
+      font-size: 40px;
+      line-height: 42px;
+    }
+
+    h2 {
+      font-size: 36px;
+      line-height: 38px;
+    }
+
+    h3 {
+      font-size: 30px;
+      line-height: 34px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 22px;
+    }
+
+    h5 {
+      font-size: 18px;
+      line-height: 21px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .editor {
+
+    h1 {
+      font-size: 36px;
+      line-height: 38px;
+      padding: 10px 0 5px;
+    }
+
+    h2 {
+      font-size: 30px;
+      line-height: 32px;
+      padding: 10px 0 5px;
+    }
+
+    h3 {
+      font-size: 26px;
+      line-height: 28px;
+      padding: 10px 0 5px;
+    }
+
+    h4 {
+      font-size: 20px;
+      line-height: 23px;
+      padding: 10px 0 5px;
+    }
+
+    h5 {
+      font-size: 18px;
+      line-height: 21px;
+      padding: 10px 0 5px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 19px;
+      padding: 0 0 7px;
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .editor {
+
+  }
+}

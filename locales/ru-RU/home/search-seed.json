@@ -1,0 +1,28 @@
+{
+  "home_seed_autofeminized": "Авто Феминизированные",
+  "home_seed_feminized": "Феминизированные",
+  "home_seed_small": "Невысокие (40-80 см)",
+  "home_seed_medium": "Средние (80-160 см)",
+  "home_seed_big": "Высокие (160-220 см)",
+  "home_seed_strong": "Сильные",
+  "home_seed_normal": "Умеренные",
+  "home_seed_light": "Слабые",
+  "home_seed_for-newbies": "Для новичков",
+  "home_seed_indoor": "В помещении",
+  "home_seed_outdoor": "На открытой местности",
+  "home_seed_exclusive": "Эксклюзивные",
+
+  "home_seed_search_seeds": "Искать семена",
+  "home_seed_info": "Еда - это более дешевый, быстрый, лучший и вкусный способ положительно повлиять на ваше здоровье. Наши блюда персонализированы для вас с учетом вашей ДНК, биома кишечника.",
+
+  "home_seed_title": "категории",
+  "home_seed_genetic": "Фильтра генетики",
+  "home_seed_taste": "Фильтра терпены",
+  "home_seed_effect": "Фильтра эффекта",
+
+  "home_seed_filter_genetic": "Искать по генетики",
+  "home_seed_filter_taste": "Искать по терпенам",
+  "home_seed_filter_effect": "Искать по эффекту",
+
+  "home_seed_filter_reset": "Сбросить все фильтра"
+}

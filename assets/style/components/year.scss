@@ -1,0 +1,46 @@
+.year {
+  position: absolute;
+  z-index: 100;
+  user-select: none;
+
+  font-family: BebasNeueBold, sans-serif;
+  font-size: 96px;
+  line-height: 90px;
+  letter-spacing: 3.5px;
+  transform: rotate(-90deg);
+
+  top: 15%;
+  right: -20px;
+
+  @include text-border($bgDarkColor, rgba($white, 0.1));
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .year {
+    font-size: 84px;
+    line-height: 81px;
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .year {
+    position: relative;
+    top: 0;
+    left: 0;
+
+    font-size: 72px;
+    line-height: 70px;
+
+    transform: none;
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .year {
+    font-size: 66px;
+    line-height: 64px;
+  }
+}

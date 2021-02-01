@@ -1,0 +1,25 @@
+.follow {
+  position: fixed;
+  bottom: 45px;
+  left: 40px;
+
+  z-index: 100;
+
+  font-family: 'Roboto Condensed', sans-serif;
+
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.933333px;
+  text-transform: uppercase;
+
+  opacity: .8;
+  transform: rotate(-90deg);
+  transform-origin: left;
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .follow {
+    display: none;
+  }
+}

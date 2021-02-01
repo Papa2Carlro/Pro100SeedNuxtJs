@@ -1,0 +1,91 @@
+.referral {
+  position: relative;
+
+  color: $white;
+
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+
+  &__body {
+    @include referral-body(360px);
+
+    &-title {
+      @include referral-title;
+
+      padding: 0 0 25px;
+    }
+
+    &-text {
+      font-size: 18px;
+      line-height: 30px;
+      opacity: 0.8;
+
+      padding: 0 0 45px;
+    }
+
+    &-or {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+
+      text-align: center;
+      opacity: .3;
+
+      padding: 15px 0 10px;
+    }
+
+    &-btn {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      letter-spacing: 3.75px;
+    }
+  }
+
+  &__bg {
+    @include bg;
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .referral {
+
+    &__body {
+
+      &-title {
+        line-height: 100%;
+        padding: 0 0 15px;
+      }
+
+      &-or {
+        padding: 20px 0;
+      }
+
+      &-text {
+        font-size: 16px;
+        line-height: 26px;
+
+        padding: 0 0 35px;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .referral {
+
+    &__body {
+
+      &-title {
+        text-align: left;
+        padding: 0 0 10px;
+      }
+    }
+  }
+}

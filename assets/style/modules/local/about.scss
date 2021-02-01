@@ -1,0 +1,322 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  color: $white;
+  overflow: hidden;
+
+  &__header {
+    &-text {
+      padding: 210px 125px 0 100px;
+
+      position: relative;
+      background: linear-gradient(306.99deg, rgba(0, 0, 0, 0.0001) 58.4%, #000000 99.54%);
+    }
+
+    &-subTitle {
+      @include sub-title;
+
+      padding: 0 0 24px;
+    }
+
+    &-label {
+      @include title;
+
+      padding: 0 0 30px;
+    }
+
+    &-description {
+      font-size: 18px;
+      line-height: 30px;
+      opacity: 0.8;
+    }
+
+    &-btn {
+      margin: 35px 0 0;
+    }
+
+    &-title {
+      position: absolute;
+      top: 35%;
+      right: -10px;
+      user-select: none;
+
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 142px;
+      line-height: 100%;
+      letter-spacing: 5.25926px;
+
+      @include text-border($bgDarkColor, rgba($white, 0.1));
+
+      transform: rotate(-90deg);
+      transform-origin: right bottom;
+    }
+  }
+
+  &__stores {
+
+    &-info {
+      padding: 90px 100px 100px;
+      height: 100vh;
+
+      overflow: auto;
+
+      background: $bgDarkColor1;
+    }
+
+    &-title {
+      @include title;
+      padding: 0 0 45px;
+    }
+
+    &-form {
+      display: flex;
+      align-items: center;
+    }
+
+    &-input {
+      flex: 1;
+      width: 100%;
+    }
+
+    &-label {
+      text-transform: uppercase;
+    }
+
+    &-address {
+      @include reset-list;
+      margin: 50px 0;
+      padding: 10px 0;
+
+      border-top: 1px solid rgba($white, .2);
+      border-bottom: 1px solid rgba($white, .2);
+
+      &Title {
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 26px;
+
+        padding: 0 0 5px;
+      }
+
+      &Address {
+        font-size: 14px;
+        line-height: 22px;
+        opacity: 0.8;
+      }
+    }
+
+    &-not_found {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 22px;
+      line-height: 101%;
+
+      padding: 10px 0 5px;
+
+      letter-spacing: 1.3px;
+    }
+
+    &-item {
+      margin: 0 -100px;
+      padding: 25px 100px;
+      transition: all .3s 0s;
+
+      display: flex;
+      align-items: flex-start;
+
+      &:hover {
+        background: rgba($white, .1);
+      }
+    }
+
+    &-num {
+      user-select: none;
+
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      letter-spacing: 1.5px;
+
+      padding: 0 15px 0 0;
+    }
+
+    &-submit {
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2px;
+
+      margin: 0 0 0 30px;
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .about {
+
+    &__header {
+
+      &-text {
+        padding: 170px 125px 0 70px;
+      }
+
+      &-subTitle {
+        padding: 0 0 20px;
+      }
+    }
+
+    &__stores {
+
+      &-info {
+        padding: 80px;
+      }
+
+      &-title {
+        padding: 0 0 40px;
+      }
+
+      &-address {
+        margin: 45px 0;
+        padding: 5px 0;
+      }
+
+      &-item {
+        margin: 0 -80px;
+        padding: 25px 80px;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .about {
+
+    &__header {
+
+      &-text {
+        padding: 50px 25px 0;
+      }
+
+      &-title {
+        display: none;
+      }
+
+      &-subTitle {
+        padding: 0 0 15px;
+      }
+
+      &-label {
+        padding: 0 0 25px;
+      }
+
+      &-description {
+        line-height: 27px;
+      }
+
+      &-btn {
+        margin: 30px auto 70px;
+      }
+    }
+
+    &__stores {
+
+      &-info {
+        height: 100%;
+        padding: 70px 25px 70px;
+      }
+
+      &-item {
+        margin: 0 -25px;
+        padding: 20px 25px;
+      }
+
+      &-title {
+        padding: 0 0 35px;
+      }
+
+      &-address {
+        margin: 40px 0;
+
+        &Address {
+          margin-left: -33px;
+        }
+      }
+
+      &-button {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .about {
+
+    &__header {
+
+      &-text {
+        padding: 45px 20px 0;
+      }
+
+      &-description {
+        line-height: 25px;
+      }
+    }
+
+    &__stores {
+
+      &-info {
+        padding: 70px 20px;
+      }
+
+      &-item {
+        margin: 0 -20px;
+        padding: 15px 20px;
+      }
+
+      &-title {
+        padding: 0 0 30px;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .about {
+
+    &__header {
+
+      &-text {
+        padding: 40px 15px 0;
+      }
+
+      &-btn {
+        width: 100% !important;
+      }
+    }
+
+    &__stores {
+
+      &-info {
+        padding: 70px 15px;
+      }
+
+      &-item {
+        margin: 0 -15px;
+        padding: 15px 15px;
+      }
+
+      &-button {
+        width: 100% !important;
+      }
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .about {
+
+  }
+}

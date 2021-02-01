@@ -1,0 +1,52 @@
+.back-call {
+  $btn: &;
+
+  &-btn {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+    background: $green1;
+
+    position: fixed;
+    z-index: 1000;
+
+    right: 15px;
+    bottom: 15px;
+    animation: rotate 1.5s infinite alternate;
+    transition: background .3s 0s;
+
+    cursor: pointer;
+
+    &:hover {
+      background: $green2;
+    }
+  }
+
+  &.isOpen {
+    #{$btn} {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+
+      &-btn {
+        right: 21px;
+      }
+    }
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(-5deg);
+  }
+  to {
+    transform: rotate(25deg);
+  }
+}

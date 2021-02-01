@@ -1,0 +1,294 @@
+.pd-filter {
+  color: $white;
+
+  &__wrapper {
+    position: relative;
+
+    &-header {
+      display: flex;
+      align-content: flex-start;
+      justify-content: space-between;
+
+      padding: 0 0 50px;
+    }
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      letter-spacing: 1.5px;
+    }
+
+    &-close {
+      cursor: pointer;
+
+      @include opacity-hover(.8, 1)
+    }
+  }
+
+  &__list {
+    @include list-unstyled;
+
+    display: flex;
+    align-content: center;
+
+    gap: 25px;
+
+    &-item {
+      position: relative;
+      flex: 1;
+
+      cursor: pointer;
+    }
+
+    input {
+      text-align: left !important;
+      @include referral-input
+    }
+
+    &-placeholder {
+      position: absolute;
+
+      top: 3px;
+      left: 5px;
+
+      font-weight: bold;
+      font-size: 14px;
+      opacity: 0.8;
+
+      user-select: none;
+
+      transition: all .2s 0s;
+
+      &.isFocus {
+        font-size: 13px;
+
+        top: -19px;
+        left: 0;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+
+      top: 11px;
+      right: 0;
+
+      border: 4px solid transparent;
+      border-top: 6px solid rgba($white, .8);
+
+      transform: rotate(0);
+      transition: all .3s 0s;
+
+      &.isOpen {
+        top: 7px;
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  &__drop {
+    @include reset-list;
+
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+
+    display: none;
+
+    left: 0;
+    right: 0;
+
+    background: $dark1;
+
+    &-item {
+      font-size: 14px;
+      opacity: 0.8;
+
+      padding: 10px 12px;
+
+      transition: background .2s 0s;
+
+      &:hover {
+        background: rgba($white, .2);
+      }
+
+      &.isActive {
+        background: rgba($white, .2);
+      }
+
+      & + & {
+        border-top: 1px solid rgba($white, .2);
+      }
+    }
+
+    &.isActive {
+      display: block;
+    }
+  }
+
+  &__clean {
+    font-family: BebasNeueBold, sans-serif;
+    font-size: 16px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+    user-select: none;
+    @include opacity-hover(.6, .8);
+
+    position: absolute;
+
+    top: 0;
+    right: -160px;
+  }
+
+  &__count {
+    position: absolute;
+
+    top: -30px;
+    right: -160px;
+
+    .active {
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    span:not(.active) {
+      font-weight: bold;
+      font-size: 14px;
+      opacity: 0.6;
+    }
+  }
+
+  &__info {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+
+    &-filter {
+      cursor: pointer;
+    }
+
+    &-close {
+      font-weight: bold;
+      font-size: 12px;
+
+      opacity: 0.6;
+
+      display: flex;
+      align-items: center;
+    }
+
+    &-count {
+      display: flex;
+      align-items: center;
+
+      .active {
+        font-weight: bold;
+        font-size: 16px;
+      }
+
+      span:not(.active) {
+        font-weight: bold;
+        font-size: 14px;
+
+        opacity: 0.6;
+      }
+    }
+  }
+}
+
+// 1370
+@media screen and (max-width: 1370px) {
+  .pd-filter {
+
+    &__clean {
+      top: calc(100% + 10px);
+      right: 0;
+    }
+
+    &__count {
+      top: -30px;
+      right: 0;
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .pd-filter {
+
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .pd-filter {
+
+    &__wrapper {
+      position: absolute;
+      z-index: 1;
+
+      top: 0;
+      left: 0;
+
+      width: 100vw;
+      height: 100vh;
+
+      overflow: auto;
+
+      padding: 20px 20px 0;
+
+      background: $bgDarkColor1;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transition: opacity .2s 0s;
+
+      &.isOpen {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+    &__list {
+      flex-direction: column;
+      gap: 50px;
+    }
+
+    &__count,
+    &__clean {
+      display: none;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .pd-filter {
+
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .pd-filter {
+
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .pd-filter {
+
+    &__wrapper {
+      &-header {
+        display: none;
+      }
+    }
+
+    &__info {
+      display: none;
+    }
+  }
+}

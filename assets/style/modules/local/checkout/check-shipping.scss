@@ -1,0 +1,38 @@
+.check-shipping {
+
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .check-shipping {
+
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .check-shipping {
+
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .check-shipping {
+
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .check-shipping {
+
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .check-shipping {
+
+  }
+}

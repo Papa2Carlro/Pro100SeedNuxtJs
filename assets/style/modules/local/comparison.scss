@@ -1,0 +1,428 @@
+.comparison {
+  display: flex;
+  flex-direction: column;
+
+  color: $white;
+  background: linear-gradient(-54.26deg, rgba(0, 0, 0, 0.0001) 58.19%, #000000 100%);
+
+  padding: 100px 30px 70px;
+
+  &__wrapper {
+    background: $bgDarkColor1;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 0 50px;
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 36px;
+
+      letter-spacing: 1.5px;
+    }
+
+    &-actions {
+      display: flex;
+      align-items: center;
+    }
+
+    &-btn {
+      font-size: 16px;
+      letter-spacing: 2px;
+
+      & + & {
+        margin: 0 0 0 30px;
+      }
+    }
+  }
+
+  &__mobile-header {
+    display: flex;
+    align-items: center;
+
+    padding: 0 0 25px;
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 36px;
+      line-height: 100%;
+
+      letter-spacing: 1.5px;
+    }
+
+    &-back {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      padding: 0 20px 0 0;
+    }
+  }
+
+  &__main {
+    display: flex;
+    gap: 50px;
+  }
+
+  &__aside {
+    width: 20%;
+
+    display: flex;
+    flex-direction: column;
+
+    &-specifications {
+      height: 360px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 38px;
+      letter-spacing: 1.5px;
+    }
+
+    &-option {
+      height: 50px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 0 12px;
+    }
+
+    &-label {
+      font-size: 18px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      line-height: 99%;
+
+      display: block;
+      padding: 0 0 0 10px;
+    }
+
+    & > div {
+      background: $dark2;
+      margin: 0 0 10px;
+    }
+  }
+
+  &__body {
+    @include reset-list;
+
+    width: 80%;
+    overflow: auto;
+    margin: 35px 0 0;
+
+    display: flex;
+    gap: 35px;
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 22px;
+
+      letter-spacing: 1.3px;
+    }
+
+    &::-webkit-scrollbar {
+      height: 12px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 0;
+    }
+
+    &::-webkit-scrollbar-track-piece,
+    &::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.05) !important;
+    }
+  }
+
+  &__item {
+    flex: 0 0 310px;
+    margin: 0 0 25px;
+
+    &-header {
+      height: 45px;
+      padding: 0 10px 0 15px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &-name {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      line-height: 105%;
+      letter-spacing: 1.5px;
+
+      padding: 0 10px 0 0;
+    }
+
+    &-close {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+
+      padding: 5px;
+      opacity: .7;
+
+      transition: opacity .2s 0s;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &-image {
+      user-select: none;
+
+      width: 100%;
+      height: 280px;
+      display: block;
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+
+    &-option {
+      height: 50px;
+      padding: 0 15px;
+
+      display: flex;
+      align-items: center;
+
+      font-weight: bold;
+      font-size: 18px;
+    }
+
+    & > div {
+      background: rgba(255, 255, 255, 0.1);
+      margin: 0 0 10px;
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .comparison {
+
+    padding: 85px 25px 55px;
+
+    &__main {
+      gap: 35px;
+    }
+
+    &__body {
+      margin: 25px 0 0;
+
+      gap: 25px;
+    }
+
+    &__aside {
+      &-specifications {
+        height: 350px;
+
+        font-size: 31px;
+      }
+
+      &-option {
+        height: 45px;
+
+        padding: 0 10px;
+      }
+
+      &-label {
+        font-size: 15px;
+      }
+    }
+
+    &__item {
+      flex: 0 0 270px;
+      margin: 0 0 20px;
+
+      &-header {
+        padding: 0 10px;
+      }
+
+      &-name {
+        font-size: 18px;
+      }
+
+      &-option {
+        height: 45px;
+        font-size: 17px;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .comparison {
+
+    padding: 80px 20px 50px;
+
+    &__header {
+      display: none;
+    }
+
+    &__main {
+      gap: 25px;
+    }
+
+    &__body {
+      width: 100%;
+      flex: 1;
+
+      margin: 0;
+
+      gap: 20px;
+    }
+
+    &__aside {
+      width: 45px;
+
+      &-specifications {
+        height: 290px;
+
+        font-size: 25px;
+
+        span {
+          transform: rotate(-90deg);
+        }
+      }
+
+      &-option {
+        height: 40px;
+
+        padding: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-label {
+        display: none;
+      }
+    }
+
+    &__item {
+      flex: 0 0 250px;
+      margin: 0 0 15px;
+
+      &-header {
+        height: 40px;
+      }
+
+      &-name {
+        font-size: 16px;
+        padding: 0 5px 0 0;
+      }
+
+      &-image {
+        height: 250px;
+      }
+
+      &-option {
+        height: 40px;
+        padding: 0 10px;
+
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .comparison {
+
+    padding: 75px 15px 40px;
+
+    &__main {
+      gap: 15px;
+    }
+
+    &__body {
+      gap: 15px;
+    }
+
+    &__aside {
+      width: 40px;
+
+      &-specifications {
+        height: 260px;
+
+        font-size: 22px;
+      }
+
+      &-option {
+        height: 32px;
+      }
+
+      & > div {
+        margin: 0 0 5px;
+      }
+    }
+
+    &__item {
+      flex: 0 0 230px;
+      margin: 0 0 10px;
+
+      &-name {
+        font-size: 15px;
+      }
+
+      &-image {
+        height: 220px;
+      }
+
+      &-option {
+        height: 32px;
+        font-size: 14px;
+      }
+
+      & > div {
+        margin: 0 0 5px;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .comparison {
+
+    padding: 65px 15px 30px;
+
+    &__main {
+      gap: 10px;
+    }
+
+    &__body {
+      gap: 10px;
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .comparison {
+
+    &__mobile-header {
+      display: none;
+    }
+  }
+}

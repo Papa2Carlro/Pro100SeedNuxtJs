@@ -1,0 +1,68 @@
+.aside {
+
+  &__navigation {
+    user-select: none;
+  }
+
+  &__list {
+    @include reset-list;
+
+    &-item {
+      margin-bottom: 16px;
+    }
+
+    &-link {
+      font-family: 'Roboto Condensed', sans-serif;
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 1px;
+
+      text-transform: uppercase;
+
+      display: flex;
+      align-items: center;
+      padding: 10px 0;
+      width: fit-content;
+
+      opacity: 0.6;
+      transition: opacity .3s 0s;
+
+      & > .active-marker {
+        width: 0;
+        height: 2px;
+        margin-right: 0;
+        background-color: $white;
+        transition: all .3s 0s;
+      }
+
+      &:hover {
+        opacity: 0.9;
+
+        & > .active-marker {
+          width: 10px;
+          margin-right: 10px;
+        }
+      }
+
+      &.isActive {
+        opacity: 1;
+
+        & > .active-marker {
+          width: 15px;
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .aside {
+    &__list {
+      &-item {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

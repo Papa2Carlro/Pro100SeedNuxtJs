@@ -1,0 +1,63 @@
+.reset {
+  position: relative;
+
+  color: $white;
+
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+
+  &__body {
+    @include referral-body(360px);
+
+    &-title {
+      @include referral-title;
+
+      padding: 0 0 90px;
+    }
+
+    &-input {
+      @include referral-input;
+    }
+
+    &-btn {
+      margin: 90px 0 0;
+    }
+
+    &-helper {
+      @include referral-helper(244px, 200px, 140px, 80px, 30px)
+    }
+  }
+
+  &__bg {
+    @include bg;
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .reset {
+
+    &__body {
+
+      &-title {
+        padding: 0 0 80px;
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .reset {
+
+    &__body {
+
+      &-title {
+        padding: 0 0 70px;
+      }
+    }
+  }
+}

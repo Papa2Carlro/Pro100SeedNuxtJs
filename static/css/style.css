@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "BebasNeueBold";
+  src: url("../fonts/ofontruBebasNeue.woff") format("woff"),
+  url("../fonts/ofontruBebasNeue.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+a{
+  text-decoration: none;
+}
+*,
+*:focus,
+*:active{
+  outline: transparent;
+}
+body {
+  background-color: #282932;
+  font-family: sans-serif;
+}
+button {
+  cursor: pointer;
+}
+.container{
+  max-width: 1360px;
+  width: 100%;
+  margin: 0 auto;
+}

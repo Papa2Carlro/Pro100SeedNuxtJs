@@ -1,0 +1,99 @@
+body {
+  background: $bgDarkColor;
+
+  &.lock-modal,
+  &.lock-panel,
+  &.lock {
+    overflow: hidden;
+    padding: 0 6px 0 0;
+
+    .header {
+      padding: 0 41px 0 35px;
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  body {
+    &.lock-modal,
+    &.lock-panel,
+    &.lock {
+
+      .header {
+        padding: 0 31px 0 25px;
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  body {
+    &.lock-modal,
+    &.lock-panel,
+    &.lock {
+
+      .header {
+        padding: 0 26px 0 20px;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  body {
+    &.lock-modal,
+    &.lock-panel,
+    &.lock {
+
+      .header {
+        padding: 0 21px 0 15px;
+      }
+    }
+  }
+}
+
+a {
+  color: $white;
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+.nuxt-progress {
+  background-color: $green1 !important;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2B2B2B;
+}
+
+::-webkit-scrollbar-track-piece {
+  background: #2B2B2B;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #5C5C66;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-corner {
+  background-color: #999;
+}
+
+::-webkit-resizer {
+  background-color: #666;
+}

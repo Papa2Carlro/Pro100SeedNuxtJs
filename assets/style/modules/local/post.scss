@@ -1,0 +1,146 @@
+#post {
+  position: relative;
+}
+
+.post {
+  min-height: 100vh;
+  color: $white;
+
+  &__info {
+    padding: 110px 100px 50px;
+
+    background: linear-gradient(306.99deg, rgba(0, 0, 0, 0.0001) 58.4%, #000000 99.54%);
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+
+      padding: 0 0 25px;
+    }
+
+    &-author {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 22px;
+      opacity: 0.8;
+
+      padding: 0 0 35px;
+    }
+
+    &-subTitle {
+      @include sub-title;
+    }
+
+    &-title {
+      @include title;
+      padding: 0 0 30px;
+    }
+
+    &-date {
+      font-size: 14px;
+      line-height: 22px;
+      opacity: 0.6;
+    }
+  }
+
+  &__image {
+    height: 100vh;
+  }
+
+  &__backBtn {
+    margin: 20px auto 70px;
+
+    font-size: 20px;
+    letter-spacing: 3.75px;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .post {
+
+    &__info {
+      padding: 80px 65px 0;
+
+      &-header {
+        padding: 0 0 20px;
+      }
+
+      &-author {
+        padding: 0 0 30px;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .post {
+
+    &__image {
+      height: 50vh;
+    }
+
+    &__info {
+      padding: 25px 20px 0;
+
+      &-header {
+        padding: 0 0 15px;
+      }
+
+      &-author {
+        padding: 0 0 25px;
+      }
+
+      &-date {
+        position: absolute;
+        top: -48px;
+        right: 0;
+      }
+    }
+
+    &__backBtn {
+      margin: 20px auto 35px;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .post {
+
+    &__info {
+      padding: 20px 15px 0;
+    }
+
+    &__backBtn {
+      margin: 15px auto 20px;
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .post {
+
+    &__info {
+      padding: 15px 10px 0;
+    }
+
+    &__backBtn {
+      width: 100% !important;
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .post {
+
+    &__backBtn {
+      display: none !important;
+    }
+  }
+}

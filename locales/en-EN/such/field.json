@@ -1,0 +1,11 @@
+{
+  "field_required_field": "Required field",
+  "field_min_length": "Minimum characters",
+  "field_email": "It looks like an email",
+  "field_email_already": "This email is already registered",
+  "field_password": "Password does not match",
+  "field_email_not": "Email not found",
+  "field_password_wrong": "Wrong password",
+  "field_forgot": "Forgot password?",
+  "field_already_exists": "This email has already been added"
+}

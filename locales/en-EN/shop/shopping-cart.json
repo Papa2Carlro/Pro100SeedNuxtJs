@@ -1,0 +1,41 @@
+{
+  "shopping_title": "shopping cart",
+
+  "shopping_pack": "in pack",
+
+  "shopping_empty": "You have no items in your shopping. Let’s go shopping!",
+  "shopping_description": "Shipping and discount codes are added at checkout.",
+
+  "shopping_finally": "Your order has been successfully paid! We will contact you shortly and let you know about the order details. Have a nice day!",
+
+  "shopping_checkout": "checkout",
+
+  "shopping_remove": "remove",
+
+  "shopping_coupon_title": "Coupon",
+  "shopping_coupon_enter": "ENTER COUPON CODE",
+  "shopping_coupon_not": "Coupon not found",
+
+  "shopping_shipping": "SHiPPING",
+
+  "shopping_return_to_shop": "Return to shop",
+  "shopping_next_step": "next step",
+  "shopping_send": "Send",
+  "shopping_back": "Back",
+
+  "shopping_bill": "On your bill",
+
+  "customer_information": "Customer information",
+  "shipping_method": "Shipping method",
+  "payment_method": "Payment method",
+
+  "shopping_dont_call": "Please don't call me back",
+  "shopping_newsletter": "Subscribe to Newsletter in Email",
+
+  "shipping_address": "Shipping address",
+  "contact_information": "Contact information",
+
+  "referral_bonus_payment": "referral Bonus",
+
+  "referral_not_money": "Your bonus account is low on funds"
+}

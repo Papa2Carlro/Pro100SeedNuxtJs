@@ -1,0 +1,126 @@
+.error {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  color: $white;
+
+  padding: 0 15px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+
+  &__main {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+
+    flex-direction: column;
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 300px;
+      line-height: 352px;
+      text-align: center;
+      letter-spacing: 27.2727px;
+    }
+
+    &-msg {
+      font-size: 16px;
+      line-height: 26px;
+
+      text-align: center;
+
+      opacity: 0.8;
+    }
+
+    &-button {
+      margin: 50px auto 0;
+    }
+  }
+
+  &__bg {
+    @include bg;
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .error {
+
+    &__main {
+
+      &-title {
+        font-size: 270px;
+        line-height: 320px;
+        letter-spacing: 24.2727px;
+      }
+
+      &-button {
+        margin: 40px auto 0;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .error {
+
+    &__main {
+
+      &-title {
+        font-size: 245px;
+        line-height: 280px;
+        letter-spacing: 24px;
+      }
+
+      &-button {
+        margin: 40px auto 0;
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .error {
+
+    &__main {
+
+      &-title {
+        font-size: 210px;
+        line-height: 240px;
+        letter-spacing: 20px;
+      }
+
+      &-button {
+        margin: 30px auto 0;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .error {
+
+    &__main {
+
+      &-title {
+        font-size: 180px;
+        line-height: 210px;
+        letter-spacing: 18px;
+      }
+
+      &-button {
+        width: 100% !important;
+        margin: 25px auto 0;
+      }
+    }
+  }
+}

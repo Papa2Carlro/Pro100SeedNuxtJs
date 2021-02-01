@@ -1,0 +1,529 @@
+.shopping {
+  $parent: &;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+
+  min-width: 100vw;
+  min-height: 100vh;
+
+  opacity: 1;
+  visibility: visible;
+
+  color: $white;
+  background: rgba($dark2, .7);
+
+  transition: opacity .3s 0s;
+
+  &__panel {
+    position: absolute;
+    z-index: 1;
+
+    right: 0;
+
+    width: 540px;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    background: $dark1;
+
+    transition: right .3s .1s;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex: 0 0 80px;
+    padding: 0 40px 0 30px;
+
+    background: $dark1;
+
+    &-count {
+      display: flex;
+      align-items: center;
+    }
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 16px;
+      line-height: 16px;
+      letter-spacing: 2px;
+
+      opacity: 0.8;
+
+      padding: 0 10px 0 0;
+    }
+
+    &-value {
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+
+      opacity: 0.8;
+    }
+
+    &-close {
+      cursor: pointer;
+      @include opacity-hover(.75, 1)
+    }
+
+    &-state {
+      display: none;
+    }
+  }
+
+  &__body {
+    @include reset-list;
+    overflow: auto;
+
+    background: $dark1;
+
+    height: calc(100vh - 80px - 173px);
+  }
+
+  &__product {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    padding: 30px 30px 30px 40px;
+    border-top: 1px solid rgba($white, .2);
+
+    transition: background .25s 0s;
+
+    &-info {
+      gap: 15px;
+      display: flex;
+    }
+
+    &-thumb {
+      max-width: 70px;
+      max-height: 74px;
+
+      min-width: 70px;
+      min-height: 74px;
+
+      user-select: none;
+      border: 1px solid rgba($white, 0.2);
+
+      img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+      }
+    }
+
+    &-name {
+      font-family: 'Roboto Condensed', sans-serif;
+
+      font-size: 14px;
+      line-height: 16px;
+      letter-spacing: 0.933333px;
+      text-transform: uppercase;
+
+      opacity: 0.8;
+
+      padding: 0 0 15px;
+    }
+
+    &-pack {
+      display: flex;
+      align-items: center;
+
+      gap: 25px;
+
+      &__label {
+        font-weight: bold;
+        font-size: 13px;
+      }
+
+      &__control {
+        font-weight: bold;
+        font-size: 16px;
+
+        user-select: none;
+
+        line-height: 100%;
+
+        span {
+          cursor: pointer;
+        }
+      }
+    }
+
+    &-price {
+      font-size: 15px;
+      font-weight: bold;
+      text-align: right;
+
+      user-select: none;
+
+      padding: 0 0 20px;
+    }
+
+    &-remove {
+      cursor: pointer;
+      user-select: none;
+
+      font-weight: bold;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      @include opacity-hover(.6, .8)
+    }
+
+    &:hover {
+      background: $red1;
+    }
+  }
+
+  &__general {
+    padding: 10px 40px 30px;
+    background: $dark1;
+
+    &-actions {
+      display: flex;
+      align-items: center;
+
+      gap: 25px
+    }
+
+    &-wrap {
+      width: 100%;
+    }
+
+    &-info {
+      position: relative;
+      padding: 0 0 30px;
+
+      display: flex;
+      align-items: flex-start;
+    }
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 2px;
+      opacity: 0.8;
+
+      padding: 0 0 5px;
+    }
+
+    &-text {
+      font-size: 14px;
+      line-height: 14px;
+      opacity: 0.6;
+    }
+
+    &-total {
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 22px;
+      line-height: 26px;
+      letter-spacing: 2px;
+    }
+
+    &-link {
+      font-size: 20px;
+      letter-spacing: 3.75px;
+    }
+  }
+
+  &__empty {
+    flex: 1;
+
+    background: $dark1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    &-icon {
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &-text {
+      padding: 30px 75px;
+
+      text-align: center;
+
+      font-size: 16px;
+      line-height: 26px;
+      opacity: 0.8;
+    }
+
+    &-link {
+      font-size: 20px;
+      letter-spacing: 3.75px;
+    }
+  }
+
+  &__bg {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(306.99deg, rgba(0, 0, 0, 0.0001) 58.4%, #000000 99.54%);
+  }
+
+  &.isClose {
+    opacity: 0;
+    visibility: hidden;
+
+    transition: opacity .3s 0s;
+
+    #{$parent} {
+
+      &__panel {
+        top: 0;
+        right: -540px;
+
+        transition: right .3s .1s;
+      }
+    }
+  }
+
+  &.isAnimate {
+    opacity: 0;
+    transition: opacity .3s 0s;
+
+    #{$parent} {
+
+      &__panel {
+        right: -540px;
+        transition: right .3s 0s;
+      }
+    }
+  }
+
+  &.isOpen {
+
+    #{$parent} {
+
+      &__header {
+
+      }
+
+      &__body {
+        height: calc(100vh - 80px - 360px);
+
+        &.isSale {
+          height: calc(100vh - 80px - 395px);
+
+          &--dbl {
+            height: calc(100vh - 80px - 430px);
+          }
+        }
+      }
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .shopping {
+    $parent: &;
+
+    &.isOpen {
+      #{$parent} {
+
+        &__body {
+          height: calc(100vh - 80px - 319px);
+
+          &.isSale {
+            height: calc(100vh - 80px - 346px);
+
+            &--dbl {
+              height: calc(100vh - 80px - 319px - 27px - 27px);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .shopping {
+    $parent: &;
+
+    &__header {
+      flex: 0 0 70px;
+      padding: 0 30px;
+    }
+
+    &__body {
+      height: calc(100vh - 70px - 173px);
+    }
+
+    .panel {
+      display: none;
+    }
+
+    &.isOpen {
+      background: $bgDarkColor1;
+
+      .panel {
+        display: block;
+      }
+
+      #{$parent} {
+
+        &__bg {
+          display: block;
+        }
+
+        &__header,
+        &__general {
+          background: transparent;
+        }
+
+        &__header {
+          &-state {
+            display: block;
+          }
+
+          &-count {
+            display: none;
+          }
+        }
+
+        &__panel {
+          width: 100%;
+          background: transparent;
+        }
+
+        &__body {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .shopping {
+    background: $bgDarkColor1;
+
+    &__body {
+      height: calc(100vh - 60px - 153px);
+
+      background: transparent;
+    }
+
+    &__empty {
+      background: transparent;
+
+      &-text {
+        padding: 20px 20px 40px;
+      }
+    }
+
+    &__header {
+      flex: 0 0 60px;
+      padding: 0 10px 0 20px;
+
+      background: transparent;
+    }
+
+    &__panel {
+      width: 100%;
+      background: transparent;
+    }
+
+    &__product {
+      padding: 20px 10px 20px 20px;
+
+      &-info {
+        gap: 10px;
+      }
+
+      &-thumb {
+        max-width: 56px;
+        max-height: 60px;
+        min-width: 56px;
+        min-height: 60px;
+      }
+
+      &:hover {
+        background: transparent;
+      }
+    }
+
+    &__general {
+      background: $dark1;
+      padding: 15px 20px 20px;
+
+      &-actions {
+        gap: 15px
+      }
+
+      &-info {
+        padding: 0 0 20px;
+      }
+
+      &-title {
+        padding: 0 0 10px;
+      }
+
+      &-link {
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+
+        height: 55px !important;
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .shopping {
+
+    &__body {
+      height: calc(100vh - 60px - 138px);
+    }
+
+    &__general {
+      padding: 10px 15px 10px;
+
+      &-actions {
+        gap: 10px
+      }
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(md) {
+  .shopping {
+
+    &__bg {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "card_thc": "ТГК",
+  "card_productivity": "Продуктивность",
+  "card_mg2": "мг2",
+  "card_add_to_cart": "Добавить в корзину",
+  "card_general": "Основное",
+  "card_gram_per_strain": "грамм на штамм",
+  "card_packs": "Пакеты",
+  "card_in_pack": "в пакете",
+  "card_bonus": "бонуса",
+  "card_amount": "количество",
+  "card_subtotal": "итого",
+
+  "card_subtotal_2": "На сумму",
+  "card_total": "итого",
+
+  "card_story_of": "Об",
+  "card_back_to_shop": "Назад в магазин",
+
+  "card_product_added": "Продукт добавлен в сравнение",
+  "card_on_page_comm": "На страницу сравнения",
+
+  "card_general_manufacturer": "производитель",
+  "card_general_variety": "сорт",
+  "card_general_flowering": "цветение",
+  "card_general_yield": "урожайность",
+  "card_general_genetics": "генетика",
+  "card_general_harvest": "урожай",
+  "card_general_plant_height": "высота растения",
+
+  "comparison_title": "Сравнение продуктов",
+  "comparison_title_mobile": "Сравнение",
+  "comparison_back_to_product": "Назад к продукту",
+  "comparison_leave_comment": "Оставить комментарий",
+
+  "comparison_specifications": "Характеристики",
+
+  "product__best": "Экономьте деньги с помощью Crock Pot Way",
+  "product__best_title": "лучшее предложение"
+}

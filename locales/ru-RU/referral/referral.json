@@ -1,0 +1,50 @@
+{
+  "referral_contact_detail": "КОНТАКТНАЯ ИНФОРМАЦИЯ",
+  "referral_referral_link": "Реферальная ссылка",
+  "referral_bonus": "Бонус",
+  "referral_history": "История покупок",
+
+  "referral_name_first": "Имя",
+  "referral_name_last": "Фамилия",
+  "referral_country": "Страна",
+  "referral_state_province": "Штат / Область",
+  "referral_address": "Улица",
+  "referral_apartment": "Дом / Квартира",
+  "referral_postal": "Почтовый индекс",
+
+  "referral_nickname": "Никнейм",
+  "referral_email": "Почта",
+  "referral_city": "Город",
+  "referral_phone": "Телефон",
+  "referral_password": "Пароль",
+  "referral_password_confirm": "Подтвердить Пароль",
+  "referral_18": "Да, мне 18 лет",
+
+  "referral_sign_in": "Войти",
+  "referral_register": "Зарегистрироваться",
+  "referral_to_account": "В кабинет",
+  "referral_or": "или",
+
+  "referral_title": "Реферал",
+  "referral_info": "Чтобы обсудить общую функцию логотипа, мы должны сначала определить и определить среду, в которой он должен будет выполнять свою функцию. Окружающая среда называется брендом и определяется следующим образом: бренд - это совокупность идей и образов.",
+
+  "referral_create_account": "Создать учетную запись",
+  "referral_create_an_account": "ЗАВЕСТИ АККАУНТ",
+
+  "referral_terms": "Создавая учетную запись, вы соглашаетесь с нашими",
+  "referral_terms_link": "Условиями",
+
+  "referral_already": "Уже есть аккаунт?",
+  "referral_already_link": "Войти",
+
+  "referral_sign_in_title": "Войти в систему",
+  "referral_resend": "Отправить письмо повторно",
+  "referral_dont_have": "Нет аккаунта?",
+
+  "referral_sign_up": "Зарегистрироваться",
+
+  "referral_reset_title": "Сбросьте свой пароль здесь",
+  "referral_reset": "Сбросить пароль",
+
+  "referral_return": "Вернуться к"
+}

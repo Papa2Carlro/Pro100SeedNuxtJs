@@ -1,0 +1,40 @@
+{
+  "card_thc": "THC",
+  "card_productivity": "Productivity",
+  "card_mg2": "mg2",
+  "card_add_to_cart": "Add to cart",
+  "card_general": "General",
+  "card_gram_per_strain": "gram per strain",
+  "card_packs": "Packs",
+  "card_in_pack": "in pack",
+  "card_bonus": "bonus",
+  "card_amount": "amount",
+  "card_subtotal": "subtotal",
+
+  "card_subtotal_2": "subtotal",
+  "card_total": "total",
+
+  "card_story_of": "STORY OF",
+  "card_back_to_shop": "back to shop",
+
+  "card_product_added": "Product added to comparison",
+  "card_on_page_comm": "Go to comparison page",
+
+  "card_general_manufacturer": "manufacturer",
+  "card_general_variety": "variety",
+  "card_general_flowering": "flowering",
+  "card_general_yield": "yield",
+  "card_general_genetics": "genetics",
+  "card_general_harvest": "harvest",
+  "card_general_plant_height": "plant height",
+
+  "comparison_title": "product comparison",
+  "comparison_title_mobile": "compare",
+  "comparison_back_to_product": "Back to product",
+  "comparison_leave_comment": "leave a comment",
+
+  "comparison_specifications": "Specifications",
+
+  "product__best": "Save Money The Crock Pot Way",
+  "product__best_title": "the best proposition"
+}

@@ -1,0 +1,10 @@
+{
+  "subscribe_title": "subscribe to our newsletter",
+  "subscribe_placeholder": "YOUR MAIL",
+  "subscribe_action": "Subscribe",
+
+  "subscribe_modal_title": "You have subscribed to the newsletter",
+  "subscribe_modal_unsubscribe": "Unsubscribe",
+  "subscribe_modal_unsubscribe_text": "You can always unsubscribe from the newsletter",
+  "subscribe_modal_succ": "You have subscribed to the newsletter"
+}

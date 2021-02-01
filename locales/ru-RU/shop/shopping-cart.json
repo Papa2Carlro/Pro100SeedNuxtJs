@@ -1,0 +1,41 @@
+{
+  "shopping_title": "Корзина",
+
+  "shopping_pack": "в пакете",
+
+  "shopping_empty": "Товаров в корзине нету. Пошел фастом покупать чет!",
+  "shopping_description": "Коды доставки и скидки добавляются при оформлении заказа.",
+
+  "shopping_finally": "Ваш заказ успешно оплачен! Мы свяжемся с вами в ближайшее время и сообщим детали заказа. Хорошего дня!",
+
+  "shopping_checkout": "Оформить",
+
+  "shopping_remove": "удалить",
+
+  "shopping_coupon_title": "Купон",
+  "shopping_coupon_enter": "ВВЕДИТЕ КОД КУПОНА",
+  "shopping_coupon_not": "Такого купона не найдено",
+
+  "shopping_shipping": "Доставка",
+
+  "shopping_return_to_shop": "Вернуться в магазин",
+  "shopping_next_step": "Следующий шаг",
+  "shopping_send": "Отправить",
+  "shopping_back": "Назад",
+
+  "shopping_bill": "На вашем счету",
+
+  "customer_information": "Информация",
+  "shipping_method": "Метод доставки",
+  "payment_method": "Способ оплаты",
+
+  "shopping_dont_call": "Пожалуйста, не перезванивайте мне",
+  "shopping_newsletter": "Подписаться на рассылку новостей",
+
+  "shipping_address": "Адрес доставки",
+  "contact_information": "Контактная информация",
+
+  "referral_bonus_payment": "Бонус с рефералов",
+
+  "referral_not_money": "На вашем бонусном счете не хватает средств"
+}

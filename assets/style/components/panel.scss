@@ -1,0 +1,653 @@
+.panel {
+  width: calc(100vw - 540px);
+  height: 100vh;
+  overflow: auto;
+
+  position: absolute;
+  z-index: -1;
+
+  top: 0;
+  left: 0;
+
+  background: $dark2;
+
+  transition: left .3s 0s;
+
+  &__title {
+    white-space: nowrap;
+
+    font-family: BebasNeueBold, sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+  }
+
+  &__header {
+    padding: 25px 0 60px 35px;
+
+    display: flex;
+    align-items: center;
+
+    &-logo {
+      a {
+        display: block;
+        @include opacity-hover(.8, 1);
+      }
+    }
+
+    &-nav {
+      @include reset-list;
+      padding: 0 0 0 100px;
+
+      display: flex;
+      align-items: center;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      user-select: none;
+
+      & + & {
+        &:before {
+          content: '';
+          display: block;
+
+          width: 25px;
+          height: 1px;
+
+          margin: 0 15px;
+
+          background: rgba($white, .2);
+        }
+      }
+    }
+
+    &-label {
+      opacity: .8;
+      font-size: 14px;
+
+      padding: 0 0 3px;
+
+      &.isActive {
+        opacity: 1;
+
+        font-weight: bold;
+        border-bottom: 2px solid $white;
+      }
+
+      &.isPassed {
+        opacity: 1;
+        font-weight: bold;
+      }
+    }
+  }
+
+  &__wrapper {
+    overflow: hidden;
+
+    &-list {
+      @include reset-list;
+
+      display: grid;
+      grid-template-columns: repeat(3, calc(100vw - 540px));
+
+      transition: transform .3s 0s;
+    }
+
+    &-item {
+      padding: 0 110px 40px 175px;
+    }
+  }
+
+  &__filter {
+    &-error {
+      color: $red;
+      font-weight: bold;
+    }
+
+    &-header {
+      padding: 0 0 15px;
+    }
+
+    &-body {
+      @include reset-list;
+
+      display: flex;
+      align-items: center;
+      padding: 20px 0 5px;
+    }
+
+    &-item {
+      font-size: 14px;
+      line-height: 16px;
+      text-transform: uppercase;
+      color: rgba($white, .6);
+      white-space: nowrap;
+
+      cursor: pointer;
+      user-select: none;
+
+      padding: 10px 20px;
+      border: 2px solid rgba($white, .6);
+
+      transition: all .2s 0s;
+
+      &.isActive {
+        font-weight: bold;
+        color: rgba($white, 1) !important;
+
+        border-color: $green1 !important;
+      }
+
+      &:hover {
+        color: rgba($white, .75);
+        border: 2px solid rgba($white, .75);
+      }
+
+      & + & {
+        margin: 0 0 0 20px;
+      }
+    }
+  }
+
+  &__body {
+    max-width: 540px;
+    margin: 0 auto;
+
+    .panel__title {
+      padding: 0 0 30px;
+    }
+
+    &-group {
+      padding: 55px 0 0;
+    }
+  }
+
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    grid-row-gap: 35px;
+    grid-column-gap: 25px;
+
+    &-input {
+      @include referral-input;
+    }
+
+    &-checkbox {
+      @include referral-checkbox;
+      justify-content: flex-start !important;
+    }
+
+    &-col2 {
+      grid-column-start: 1;
+      grid-column-end: 3;
+    }
+  }
+
+  &__shipping {
+    @include reset-list;
+
+    border-bottom: 1px solid rgba($white, .2);
+
+    &-item {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      padding: 30px 0;
+
+      border-top: 1px solid rgba($white, .2);
+    }
+
+    &-radio {
+      @include referral-radio;
+    }
+
+    &-date {
+      padding: 0 0 0 40px;
+
+      font-size: 14px;
+      opacity: .8;
+    }
+
+    &-price {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 24px;
+    }
+  }
+
+  &__bonus {
+    padding: 15px 0 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-label {
+      font-size: 18px;
+      font-weight: bold;
+
+      opacity: .8;
+    }
+
+    &-value {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 24px;
+      letter-spacing: 2px;
+    }
+  }
+
+  // Panelka
+  &__general {
+    padding: 0 30px 30px 40px;
+
+    &-actions {
+      display: flex;
+      align-items: center;
+
+      gap: 25px
+    }
+
+    &-link {
+      font-size: 20px;
+      letter-spacing: 3.75px;
+    }
+  }
+  &__total {
+    padding: 20px 0 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-label {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+
+      text-transform: uppercase;
+
+      opacity: 0.8;
+    }
+
+    &-price {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 22px;
+      letter-spacing: 2px;
+
+      user-select: none;
+    }
+  }
+  &__info {
+    margin: 0 -30px 0 -40px;
+    padding: 25px 30px 25px 40px;
+
+    border-top: 1px solid rgba($white, .2);
+    border-bottom: 1px solid rgba($white, .2);
+
+    &-coupon {
+      gap: 25px;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    &-input {
+      @include referral-input;
+    }
+
+    &-list {
+      padding: 20px 0 0 !important;
+      @include reset-list;
+    }
+
+    &-helper {
+      color: $red;
+      padding: 0 0 11px;
+    }
+
+    &-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      & + & {
+        padding: 5px 0 0;
+      }
+    }
+
+    &-title {
+      font-family: BebasNeueBold, sans-serif;
+
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+
+      opacity: 0.8;
+    }
+
+    &-value {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      letter-spacing: 1.5px;
+
+      opacity: 0.8;
+    }
+  }
+
+  &.isOpen {
+    left: calc(-100vw + 540px);
+  }
+}
+
+// 1380
+@media screen and (max-width: 1380px) {
+  .panel {
+
+    &__header {
+      padding: 25px 0 50px 20px;
+
+      &-nav {
+        padding: 0 0 0 60px;
+      }
+
+      &-item {
+
+        & + & {
+          &:before {
+            width: 15px;
+            margin: 0 10px;
+          }
+        }
+      }
+    }
+
+    &__wrapper {
+
+      &-item {
+        padding: 0 60px 40px 120px;
+      }
+    }
+
+    &__general {
+      padding: 0 30px 30px 30px;
+
+      &-link {
+        font-size: 18px;
+        letter-spacing: 3.5px;
+      }
+    }
+  }
+}
+
+// 1280
+@media screen and (max-width: 1280px) {
+  .panel {
+
+    &__header {
+
+      &-nav {
+        padding: 0 0 0 30px;
+      }
+    }
+
+    &__wrapper {
+
+      &-item {
+        padding: 0 30px 40px 90px;
+      }
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .panel {
+
+    &__header {
+      padding: 25px 0 30px 20px;
+
+      flex-direction: column;
+      align-items: flex-start;
+
+      &-nav {
+        padding: 15px 0 0;
+      }
+    }
+
+    &__wrapper {
+
+      &-item {
+        padding: 0 20px 40px;
+      }
+    }
+
+    // Panelka
+    &__general {
+      padding: 0 20px 15px;
+
+      &-actions {
+        gap: 20px
+      }
+    }
+    &__total {
+      padding: 15px 0;
+    }
+    &__info {
+      margin: 0 -20px;
+      padding: 15px 25px 20px;
+
+      &-coupon {
+        gap: 20px;
+      }
+
+      &-helper {
+        color: $red;
+        padding: 0 0 3px;
+      }
+
+      &-item {
+        & + & {
+          padding: 0;
+        }
+      }
+
+      &-title {
+        font-size: 14px;
+      }
+
+      &-value {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .panel {
+    width: 100%;
+
+    position: relative;
+    z-index: 0;
+
+    top: 0;
+    left: 0;
+
+    border-top: 1px solid rgba($white, .4);
+
+    background: transparent;
+    transition: none;
+
+    height: calc(100vh - 70px - 319px);
+
+    &.isSale {
+      height: calc(100vh - 70px - 319px - 27px);
+
+      &--dbl {
+        height: calc(100vh - 70px - 319px - 27px - 27px);
+      }
+    }
+
+    &__header {
+      display: none;
+    }
+
+    &__wrapper {
+
+      &-list {
+        grid-template-columns: repeat(3, 100vw);
+      }
+
+      &-item {
+        padding: 10px 40px 25px;
+      }
+    }
+
+    &__info {
+      margin: 0 -40px;
+      padding: 15px 40px 20px;
+    }
+
+    &__filter {
+
+      &-body {
+        width: calc(100vw - 80px);
+        overflow: auto;
+      }
+    }
+
+    &__body {
+      max-width: 100%;
+    }
+
+    &.isOpen {
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .panel {
+    height: calc(100vh - 60px - 268px);
+
+    &__wrapper {
+
+      &-item {
+        padding: 10px 20px 25px;
+      }
+    }
+
+    &__filter {
+
+      &-item {
+        font-size: 12px;
+        line-height: 14px;
+
+        padding: 8px 25px;
+      }
+
+      &-body {
+        width: calc(100vw - 40px);
+      }
+    }
+
+    &__body {
+
+      &-group {
+        padding: 40px 0 0;
+      }
+    }
+
+    &__info {
+      margin: 0 -20px;
+      padding: 10px 20px;
+    }
+    &__total {
+      padding: 5px 0 10px;
+
+      &-label {
+        font-size: 14px;
+      }
+
+      &-price {
+        font-size: 18px;
+      }
+    }
+
+    &.isSale {
+      height: calc(100vh - 60px - 268px - 27px);
+
+      &--dbl {
+        height: calc(100vh - 60px - 268px - 27px - 27px);
+      }
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .panel {
+    height: calc(100vh - 60px - 271px);
+
+    &__wrapper {
+
+      &-item {
+        padding: 10px 15px 20px;
+      }
+    }
+
+    &__filter {
+
+      &-body {
+        padding: 15px 0 5px;
+        width: calc(100vw - 30px);
+      }
+    }
+
+    &__body {
+
+    }
+
+    &__form {
+      grid-template-columns: repeat(1, 1fr);
+      grid-row-gap: 25px;
+      grid-column-gap: 20px;
+    }
+
+    &__total {
+      padding: 5px 0;
+    }
+    &__info {
+      margin: 0 -15px;
+      padding: 10px 15px 0;
+
+      &-coupon {
+        flex-direction: column;
+        gap: 5px;
+      }
+
+      &-submit {
+        width: 100% !important;
+      }
+    }
+
+    &.isSale {
+      height: calc(100vh - 60px - 271px - 27px);
+
+      &--dbl {
+        height: calc(100vh - 60px - 261px - 27px - 27px);
+      }
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(md) {
+  .panel {
+
+  }
+}

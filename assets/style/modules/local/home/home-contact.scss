@@ -1,0 +1,93 @@
+.home-contact {
+  color: $white;
+
+  margin: 80px 0 0;
+  min-height: fit-content !important;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+
+    padding: 90px 10% 90px 20%;
+
+    &-title {
+      @include title;
+      padding: 0 0 35px;
+    }
+
+    &-list {
+      @include reset-list;
+    }
+
+    &-item {
+      border-top: 1px solid rgba($white, .2);
+      border-bottom: 1px solid rgba($white, .2);
+
+      padding: 15px 0;
+
+      display: flex;
+      align-items: center;
+    }
+
+    &-description {
+      padding: 0 0 0 12px;
+    }
+
+    &-label {
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    &-link {
+      font-size: 14px;
+      line-height: 100%;
+
+      color: $green1;
+
+      opacity: 0.8;
+      transition: color .3s 0s;
+
+      &:hover {
+        color: $green2;
+      }
+    }
+  }
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .home-contact {
+
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .home-contact {
+
+    &__info {
+      padding: 30px 25px 70px;
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .home-contact {
+
+    &__info {
+      padding: 15px 20px 70px;
+    }
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .home-contact {
+
+    &__info {
+      padding: 0 15px 70px;
+    }
+  }
+}

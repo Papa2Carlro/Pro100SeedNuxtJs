@@ -1,0 +1,198 @@
+body {
+  .cart {
+    color: $dark2;
+    background: $white;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+
+    flex: 0 0 310px;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    &__thumb {
+      width: 100%;
+      height: 280px;
+      user-select: none;
+
+      img {
+        width: 100%;
+        max-height: 100%;
+        object-fit: cover;
+
+        user-select: none;
+      }
+    }
+
+    &__info {
+      padding: 24px;
+      flex: 1;
+
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__title {
+      font-family: BebasNeueBold, sans-serif;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: 1.5px;
+
+      width: fit-content;
+
+      margin: 0 0 10px;
+      display: block;
+
+      color: $dark2;
+      transition: color .2s 0s;
+
+      &:hover {
+        color: $dark3;
+      }
+    }
+
+    &__moreInfo {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+
+      margin-top: auto;
+      padding: 0 0 10px;
+
+      user-select: none;
+      pointer-events: none;
+    }
+
+    &__params {
+      @include reset-list;
+
+      & > li {
+        font-size: 12px;
+        line-height: 18px;
+
+        color: $gray1;
+      }
+    }
+
+    &__price {
+      display: flex;
+      align-items: center;
+
+      font-size: 16px;
+
+      &-old {
+        color: $gray2;
+        padding: 0 12px 0 0;
+      }
+
+      &-now {
+        font-weight: bold;
+      }
+
+      &-uah {
+        font-size: 13px;
+        margin-right: -6px;
+      }
+    }
+
+    &__actions {
+      $action: &;
+
+      display: flex;
+      align-items: center;
+
+      height: 60px;
+      user-select: none;
+
+      &-col {
+        @include reset-btn;
+        width: 56px;
+        height: 100%;
+        background: $white1;
+
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+
+        font-family: BebasNeueBold, sans-serif;
+        font-size: 16px;
+        letter-spacing: 2px;
+        color: $dark2;
+        opacity: .5;
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+          /* display: none; <- Crashes Chrome on hover */
+          -webkit-appearance: none;
+          margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+        }
+
+        &.isActive {
+          opacity: 1;
+        }
+      }
+
+      &-favorite {
+        width: 56px;
+        height: 100%;
+
+        opacity: 0.8;
+        border: 2px solid $green1;
+        box-sizing: border-box;
+
+        @include center;
+
+        &.favorite {
+          svg {
+            fill: $green1;
+          }
+        }
+      }
+
+      &-addCart {
+        font-size: 16px !important;
+        letter-spacing: 2px !important;
+      }
+    }
+
+    &__remove {
+      @include opacity-hover(.8, 1);
+
+      display: none;
+
+      top: 0;
+      right: 0;
+      position: absolute;
+
+      cursor: pointer;
+
+      width: 48px;
+      height: 48px;
+
+      background: rgba(7, 8, 8, 0.71);
+
+      svg {
+        @include absolut-center;
+      }
+    }
+
+    &--sell:after {
+      @include sell(56px, 12px);
+
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  body {
+    .cart {
+
+      &__remove {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "home_seed_autofeminized": "Autofeminized",
+  "home_seed_feminized": "Feminized",
+  "home_seed_small": "Small (40-80 sm)",
+  "home_seed_medium": "Medium (80-160 sm)",
+  "home_seed_big": "Big (160-220 sm)",
+  "home_seed_strong": "Strong",
+  "home_seed_normal": "Normal",
+  "home_seed_light": "Light",
+  "home_seed_for-newbies": "For newbies",
+  "home_seed_indoor": "Indoor",
+  "home_seed_outdoor": "Outdoor",
+  "home_seed_exclusive": "Exclusive",
+
+  "home_seed_search_seeds": "Search seeds",
+  "home_seed_info": "Food is a cheaper, faster, better, more delicious way to positively affect your health. Our meals are personalized for you using your DNA, gut biome.",
+
+  "home_seed_title": "categories",
+  "home_seed_genetic": "genetics filters",
+  "home_seed_taste": "taste filters",
+  "home_seed_effect": "effect filters",
+
+  "home_seed_filter_genetic": "search by genetics",
+  "home_seed_filter_taste": "search by taste",
+  "home_seed_filter_effect": "search by effect",
+
+  "home_seed_filter_reset": "Reset all filters"
+}

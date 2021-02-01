@@ -1,0 +1,10 @@
+{
+  "subscribe_title": "Подписаться на нашу новосную рассылку",
+  "subscribe_placeholder": "Ваша почта",
+  "subscribe_action": "Подписаться",
+
+  "subscribe_modal_title": "Вы подписались на новостную рассылку",
+  "subscribe_modal_unsubscribe": "Отменить подписку",
+  "subscribe_modal_unsubscribe_text": "Вы всегда можете отписаться от рассылки",
+  "subscribe_modal_succ": "Вы подписались на новостную рассылку"
+}

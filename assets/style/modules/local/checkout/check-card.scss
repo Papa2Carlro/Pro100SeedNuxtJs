@@ -1,0 +1,38 @@
+.check-card {
+
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .check-card {
+
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .check-card {
+
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .check-card {
+
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .check-card {
+
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .check-card {
+
+  }
+}

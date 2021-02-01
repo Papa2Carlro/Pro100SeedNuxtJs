@@ -1,0 +1,24 @@
+{
+  "filter_title": "Filter by",
+  "filter_tgc": "THC",
+  "filter_yield": "Yield",
+  "filter_plant_height": "Plant Height",
+  "filter_bloom": "Bloom",
+  "filter_genetics": "Genetics",
+
+  "filter_clean": "Clean filter",
+
+  "filter_unknown": "Unknown",
+
+  "filter_thc_low": "Low to 10%",
+  "filter_thc_average": "The average 10-15%",
+  "filter_thc_high": "High 15-20%",
+  "filter_thc_high_very": "Very high above 20%",
+
+  "filter_low": "Low",
+  "filter_average": "Average",
+  "filter_high": "High",
+
+  "filter_auto_flowering": "Auto Flowering",
+  "filter_photo_flowering": "Photo Flowering"
+}

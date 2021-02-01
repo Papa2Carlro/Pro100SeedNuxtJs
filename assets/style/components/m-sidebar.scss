@@ -1,0 +1,57 @@
+.m-sidebar {
+  margin: 0 0 15px;
+  width: calc(100vw - 47px);
+
+  &__list {
+    @include reset-list;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 0 10px;
+
+    width: 100%;
+    overflow: auto;
+  }
+
+  &__item {
+    height: 30px;
+    margin: 0 12px 0 0;
+    & + & {
+
+    }
+  }
+
+  &-link {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    white-space: nowrap;
+
+    padding: 0 14px;
+
+    opacity: 0.4;
+    border: 2px solid $white;
+    box-sizing: border-box;
+
+    font-weight: bold;
+    font-size: 12px;
+
+    &.isActive {
+      opacity: 1;
+      border-color: $green;
+    }
+  }
+}
+
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .m-sidebar {
+    display: none;
+  }
+}

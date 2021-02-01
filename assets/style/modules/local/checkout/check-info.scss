@@ -1,0 +1,38 @@
+.check-info {
+
+}
+
+// 1200
+@include media-breakpoint-down(lg) {
+  .check-info {
+
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .check-info {
+
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .check-info {
+
+  }
+}
+
+// 576
+@media screen and (max-width: 576px) {
+  .check-info {
+
+  }
+}
+
+// -----------------------------------
+@include media-breakpoint-up(lg) {
+  .check-info {
+
+  }
+}

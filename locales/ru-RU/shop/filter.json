@@ -1,0 +1,24 @@
+{
+  "filter_title": "Фильтровать по",
+  "filter_tgc": "Содержание тгк",
+  "filter_yield": "Урожайность",
+  "filter_plant_height": "Высота растения",
+  "filter_bloom": "Тип цветение",
+  "filter_genetics": "Генетика",
+
+  "filter_clean": "Очистить фильтр",
+
+  "filter_unknown": "Неизвестно",
+
+  "filter_thc_low": "Низкое (до 10%)",
+  "filter_thc_average": "Среднее (10-15%)",
+  "filter_thc_high": "Высокое (15-20%)",
+  "filter_thc_high_very": "Очень высокое (более 20%)",
+
+  "filter_low": "Невысокие",
+  "filter_average": "Средние",
+  "filter_high": "Высокие",
+
+  "filter_auto_flowering": "Автоцветущие",
+  "filter_photo_flowering": "Фотоцветущие"
+}

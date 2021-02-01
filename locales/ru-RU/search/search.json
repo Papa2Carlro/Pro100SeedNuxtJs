@@ -1,0 +1,14 @@
+{
+  "search_placeholder": "Поиск",
+  "search_on_request": "По запросу",
+  "search_show_only": "Показать только",
+  "search_change_filters": "изменить фильтр",
+
+  "search_genetics": "Генетика",
+  "search_taste": "Вкус",
+  "search_effect": "Эффект",
+
+  "search_item": "товар",
+  "search_items": "товарa",
+  "search_itemss": "товаров"
+}

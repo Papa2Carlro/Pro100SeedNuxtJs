@@ -1,0 +1,111 @@
+.sign {
+  position: relative;
+
+  color: $white;
+
+  min-height: 100vh;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: center;
+
+  &__body {
+    @include referral-body(360px);
+
+    &-title {
+      @include referral-title;
+
+      padding: 0 0 40px;
+    }
+
+    &-input {
+      @include referral-input;
+    }
+
+    &-error {
+      padding: 5px 0 0;
+      color: $red;
+      line-height: 100%;
+    }
+
+    &-group {
+
+      & + & {
+        margin: 40px 0 0;
+      }
+    }
+
+    &-forgot {
+      display: block;
+
+      margin: 20px 0 40px;
+
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+
+      opacity: 0.8;
+    }
+
+    &-social {
+      padding: 10px 0 0;
+
+      display: flex;
+      gap: 10px;
+    }
+
+    &-link {
+      flex: 1;
+      width: 100%;
+
+      height: 60px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:first-child {
+        background: $white;
+      }
+
+      &:last-child {
+        background: $blue1;
+      }
+    }
+
+    &-helper {
+      @include referral-helper(165px, 120px, 70px, 45px, 30px)
+    }
+  }
+
+  &__bg {
+    @include bg;
+  }
+}
+
+// 992
+@include media-breakpoint-down(md) {
+  .sign {
+
+    &__body {
+
+      &-link {
+        height: 50px;
+      }
+    }
+  }
+}
+
+// 768
+@include media-breakpoint-down(sm) {
+  .sign {
+
+    &__body {
+
+      &-link {
+        height: 45px;
+      }
+    }
+  }
+}
