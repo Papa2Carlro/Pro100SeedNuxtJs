@@ -9,7 +9,6 @@
         <p class="mb-3">
           {{ 'home_first_info1' | localize(locale) }}
         </p>
-        <p>{{ 'home_first_info2' | localize(locale) }}</p>
       </div>
 
       <nuxt-link to="/shop" class="home-first__info-link btn btn--green btn--lg1">
